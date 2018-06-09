@@ -16,12 +16,14 @@ echo "${commands}" | mysql
 ## Install magento
 cd /www
 
+echo "Download Magento v${mage}"
 wget -q https://github.com/magento/magento2/archive/${mage}.zip
 unzip -q ${mage}.zip -d .
 rm ${mage}.zip
 cd /www
 mv magento2-${mage}/* magento2-${mage}/.[^.]* . && rmdir magento2-${mage}/
 
+echo "Download Magento sample data v${mage}"
 wget -q https://github.com/magento/magento2-sample-data/archive/${mage}.zip
 unzip -q ${mage}.zip
 php -f /www/magento2-sample-data-${mage}/dev/tools/build-sample-data.php -- --ce-source="/www"

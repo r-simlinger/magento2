@@ -13,4 +13,5 @@ COPY www.conf /etc/nginx/conf.d/www.conf
 COPY install_magento.sh /root/install_magento.sh
 RUN /bin/bash -c "source /root/install_magento.sh"
 
-CMD start.sh
+ADD start.sh /root/start.sh
+ENTRYPOINT /root/start.sh
