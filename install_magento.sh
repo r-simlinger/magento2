@@ -4,9 +4,6 @@ url=http://173.212.254.177:6090/
 host=localhost
 #host='%'
 
-## Init Nginx
-/etc/init.d/nginx restart
-
 ## Init DB
 /etc/init.d/mysql restart
 
@@ -59,3 +56,6 @@ chgrp -R www-data /www
 ## php bin/magento setup:static-content:deploy -f
 ## php bin/magento cache:flush
 ## php bin/magento indexer:reindex
+
+## Init Nginx
+/etc/init.d/nginx restart
