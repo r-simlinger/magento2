@@ -1,8 +1,5 @@
 FROM sdafj123/php-fpm-7.1
 
-# Add required files
-ADD composer /var/www/.composer
-
 # Install system apps
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
