@@ -21,7 +21,7 @@ RUN chmod u+x bin/magento
 
 # Install magento
 RUN php bin/magento sampledata:deploy
-RUN php bin/magento setup:install --admin-firstname="Ad" --admin-lastname="Minator" --admin-email="adminator@adminator.ro" --admin-user="Adminator" --admin-password="sdr117781" --base-url="http://$2:6090/" --backend-frontname="admin" --db-host="database" --db-name="secu" --db-user="secu" --db-password="secu"
+RUN php bin/magento setup:install --admin-firstname="Ad" --admin-lastname="Minator" --admin-email="adminator@adminator.ro" --admin-user="Adminator" --admin-password="sdr117781" --base-url="http://173.212.254.177:6090/" --backend-frontname="admin" --db-host="database" --db-name="secu" --db-user="secu" --db-password="secu"
 
 RUN php bin/magento admin:user:unlock Adminator
 
