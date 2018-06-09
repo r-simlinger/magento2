@@ -5,7 +5,7 @@ host=localhost
 #host='%'
 
 ## Init DB
-/etc/init.d/mysql restart
+/etc/init.d/mysql start
 
 commands="CREATE DATABASE \`secu\`;CREATE USER 'secu'@'${host}' IDENTIFIED BY 'secu';GRANT USAGE ON *.* TO 'secu'@'${host}' IDENTIFIED BY 'secu';GRANT ALL privileges ON \`secu\`.*
 TO 'secu'@'${host}';FLUSH PRIVILEGES;"
@@ -38,7 +38,7 @@ php bin/magento setup:install \
   --admin-lastname=x \
   --admin-email=secu@example.com \
   --admin-user=secu \
-  --admin-password=secu \
+  --admin-password=secu123 \
   --base-url=${url} \
   --backend-frontname=admin \
   --db-host=localhost \
@@ -56,6 +56,3 @@ chgrp -R www-data /www
 ## php bin/magento setup:static-content:deploy -f
 ## php bin/magento cache:flush
 ## php bin/magento indexer:reindex
-
-## Init Nginx
-/etc/init.d/nginx restart
