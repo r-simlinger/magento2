@@ -1,5 +1,6 @@
 #! /bin/bash
 mage=2.2.4
+url=http://173.212.254.177:6090/
 host=localhost
 #host='%'
 
@@ -34,12 +35,12 @@ find var vendor generated pub/static pub/media app/etc -type d -exec chmod u+w {
 chmod u+x bin/magento
 
 php bin/magento setup:install \
-  --admin-firstname=Ad \
-  --admin-lastname=Minator \
-  --admin-email=adminator@adminator.ro \
-  --admin-user=Adminator \
-  --admin-password=sdr117781 \
-  --base-url=http://173.212.254.177:6090/ \
+  --admin-firstname=secu \
+  --admin-lastname=x \
+  --admin-email=secu@example.com \
+  --admin-user=secu \
+  --admin-password=secu \
+  --base-url=${url} \
   --backend-frontname=admin \
   --db-host=localhost \
   --db-name=secu \
