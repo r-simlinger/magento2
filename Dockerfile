@@ -11,7 +11,7 @@ WORKDIR /www
 # Install magento via zip from github
 COPY www.conf /etc/nginx/conf.d/www.conf
 COPY install_magento.sh /root/install_magento.sh
-RUN /bin/bash -c "source /root/install_magento.sh"
+RUN /bin/bash -c "source /root/install_magento.sh $VIRTUAL_HOST $SHOP_VERSION"
 
 ADD start.sh /root/start.sh
 RUN chmod +x /root/start.sh
