@@ -1,8 +1,8 @@
 #! /bin/bash
-mage=2.2.4
-url=http://173.212.254.177:6090/
-host=localhost
-#host='%'
+mage="2.2.4"
+url="http://magento2.runtest.de/"
+#host=localhost
+host="%"
 
 ## Init DB
 /etc/init.d/mysql start
