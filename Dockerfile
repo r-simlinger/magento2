@@ -1,5 +1,9 @@
 FROM sdafj123/php-fpm-7.1
 
+# Define environment variables
+ENV VIRTUAL_HOST magento2.runtest.de
+ENV SHOP_VERSION 2.2.4
+
 # Install system apps
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get -q update
