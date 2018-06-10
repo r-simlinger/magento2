@@ -16,3 +16,5 @@ RUN /bin/bash -c "source /root/install_magento.sh $VIRTUAL_HOST $SHOP_VERSION"
 ADD start.sh /root/start.sh
 RUN chmod +x /root/start.sh
 ENTRYPOINT /root/start.sh
+
+EXPOSE 3306
