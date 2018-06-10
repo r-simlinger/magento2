@@ -1,6 +1,6 @@
 #! /bin/bash
-mage="2.2.4"
-url="http://magento2.runtest.de/"
+mage="$2"
+url="http://$1/"
 #host=localhost
 host="%"
 
