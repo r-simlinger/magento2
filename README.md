@@ -1,4 +1,5 @@
 # Start
+```
 docker run -d -p 80:80 -p 443:443 \
   --name nginx-proxy \
   -v /path/to/certs:/etc/nginx/certs:ro \
@@ -18,6 +19,7 @@ docker run -d \
 docker run -d -it \
   --name magento2 \
   sdafj123/magento2
+```
 
 # URL
 http://magento2.runtest.de/
