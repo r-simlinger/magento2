@@ -14,4 +14,5 @@ COPY install_magento.sh /root/install_magento.sh
 RUN /bin/bash -c "source /root/install_magento.sh"
 
 ADD start.sh /root/start.sh
+RUN chmod +x /root/start.sh
 ENTRYPOINT /root/start.sh
