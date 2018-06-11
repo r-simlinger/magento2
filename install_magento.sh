@@ -1,8 +1,8 @@
 #! /bin/bash
-mage=2.2.4
-url=http://173.212.254.177:6090/
-host=localhost
-#host='%'
+mage="$2"
+url="https://$1/"
+#host=localhost
+host="%"
 
 ## Init DB
 /etc/init.d/mysql start
@@ -42,6 +42,9 @@ php bin/magento setup:install \
   --admin-user=secu \
   --admin-password=secu123 \
   --base-url=${url} \
+  --base-url-secure=${url} \
+  --use-secure=1 \
+  --use-secure-admin=1 \
   --backend-frontname=admin \
   --db-host=localhost \
   --db-name=secu \
