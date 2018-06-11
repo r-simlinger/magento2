@@ -6,8 +6,7 @@ ENV SHOP_VERSION 2.2.4
 
 # Install system apps
 RUN export DEBIAN_FRONTEND=noninteractive
-RUN apt-get -qq update
-RUN apt-get -qq -y install default-mysql-server default-mysql-client unzip
+RUN apt-get -qq update && apt-get -qq -y install default-mysql-server default-mysql-client unzip
 
 # Fix permissions
 WORKDIR /www
