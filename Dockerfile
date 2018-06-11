@@ -3,8 +3,8 @@ FROM sdafj123/php-fpm-7.1
 # Define environment variables
 ENV SHOP_VERSION 2.2.4
 ENV VIRTUAL_HOST magento2.runtest.de
-EMV LETSENCRYPT_HOST magento2.runtest.de
-EMV LETSENCRYPT_EMAIL foo@simlinger.eu
+ENV LETSENCRYPT_HOST magento2.runtest.de
+ENV LETSENCRYPT_EMAIL foo@simlinger.eu
 
 # Install system apps
 RUN export DEBIAN_FRONTEND=noninteractive
