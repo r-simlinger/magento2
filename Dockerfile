@@ -13,11 +13,11 @@ RUN apt-get -qq update && apt-get -qq -y install default-mysql-server default-my
 # Fix permissions
 WORKDIR /www
 
-# Install magento via zip from github
+# Install the shop
 COPY www.conf /etc/nginx/conf.d/www.conf
-COPY install_magento.sh /root/install_magento.sh
-RUN chmod +x /root/install_magento.sh
-RUN /root/install_magento.sh $VIRTUAL_HOST $SHOP_VERSION
+COPY install_shop.sh /root/install_shop.sh
+RUN chmod +x /root/install_shop.sh
+RUN /root/install_shop.sh $VIRTUAL_HOST $SHOP_VERSION
 
 ADD start.sh /root/start.sh
 RUN chmod +x /root/start.sh
